@@ -43,6 +43,13 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void IsValidBracketExpression_Should_Return_False_When_There_Are_Nested_Brackets_Closed_In_The_Wrong_Order()
+        {
+            string testString = "{([)}]";
+            testString.IsValidBracketExpression().Should().BeFalse();
+        }
+
+        [TestMethod]
         public void IsValidBracketExpression_Should_Return_False_When_There_Are_Closing_Brackets_Without_Opening_Brackets()
         {
             string testString = ")";

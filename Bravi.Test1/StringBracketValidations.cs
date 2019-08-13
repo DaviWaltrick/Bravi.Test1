@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Bravi.Test1
 {
-    public static class StringBraketValidations
+    public static class StringBracketValidations
     {
         private readonly static Dictionary<char, char> bracketPairs = new Dictionary<char, char>() { { '(', ')' }, { '{', '}' }, { '[', ']' } };
 
